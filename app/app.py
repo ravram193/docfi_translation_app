@@ -2,7 +2,6 @@
 app.py  —  Whisper Transcription Pipeline
 ==========================================
 Transcribe → Clean (AWS Claude Sonnet) → Translate (AWS Translate / ai4bharat)
-→ Verify (Google TTS playback)
 
 Single language dropdown drives dynamic ASR engine selection:
   - Most languages → WhisperKit only
@@ -40,7 +39,7 @@ import soundfile as sf
 from dash import Input, Output, State, callback, dcc, html
 from dash.exceptions import PreventUpdate
 
-from pipeline import (
+from app.pipeline import (
     ALL_LANGUAGES,
     INDIAN_LANGUAGE_CODES,
     SOUTH_ASIAN_LANGUAGES,
@@ -808,7 +807,7 @@ def handle_translation(n_clicks, tr_engine, tr_src, raw, cleaned, active_lang):
             cleaned_en_text = clean_with_bedrock(translated_text, language="English", diarize=True)
         except Exception as e:
             log.warning(f"Bedrock polishing failed, falling back to regex: {e}")
-            from pipeline import clean_regex
+            from app.pipeline import clean_regex
             cleaned_en_text = clean_regex(translated_text)
             
         cleaned_en_text = str(cleaned_en_text or "")
