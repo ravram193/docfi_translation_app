@@ -502,8 +502,8 @@ def update_engine_indicator(active_engine, lang_code):
 
 
 # ── 2. Language dropdown → rebuild ASR engine/model panel ─────────────────────
-# Uses dcc.RadioItems (stable Dash component with its own state) instead of
-# html.Buttons, so clicks are handled natively without fragile dynamic IDs.
+# Uses dcc.RadioItems (stable Dash component with its own state)
+# so clicks are handled natively without fragile dynamic IDs.
 
 
 # ── 3. RadioItems → stores (model + engine) ───────────────────────────────────
@@ -738,7 +738,6 @@ def do_transcribe_and_clean(_, upload_contents, upload_filename, wk_model, asr_e
         return err_msg, err_msg, "", "", ""
 
 # ── 9. Translate Callback ──────────────────────────────────────────────────────
-# ── 9. Translate Callback ──────────────────────────────────────────────────────
 @callback(
     Output("tr-output-raw", "children"),
     Output("tr-output-clean", "children"),
@@ -796,7 +795,7 @@ def handle_translation(n_clicks, tr_engine, tr_src, raw, cleaned, active_lang):
         translated_text = str(translated_text or "")
 
         # 2. English Polishing (Bedrock/Claude)
-        # We check length to prevent sending empty snippets that cause Claude to "chat" back
+        # Check length to prevent sending empty snippets that cause Claude to "chat" back
         if len(translated_text.strip()) < 5:
             ui_raw = translated_text if translated_text.strip() else html.Span("(empty)", style=PLACEHOLDER_STYLE)
             ui_clean = html.Span("(Text too short for medical formatting)", style=PLACEHOLDER_STYLE)
