@@ -1,0 +1,45 @@
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Audio files
+*.mp3
+*.wav
+*.m4a
+*.ogg
+*.flac
+*.mp4
+
+# Hugging Face model cache
+~/.cache/huggingface/
+.cache/
+
+# AWS
+.aws/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# WhisperKit model downloads
+*.mlpackage/
+*.mlmodelc/

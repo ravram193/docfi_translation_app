@@ -1,0 +1,31 @@
+# ── Core UI ─────────────────────────────────────────────
+dash>=2.18.0
+dash-bootstrap-components>=1.6.0
+
+# ── AWS ─────────────────────────────────────────────────
+boto3>=1.35.0
+
+# ── HTTP ────────────────────────────────────────────────
+requests>=2.32.0
+
+# ── Audio I/O ───────────────────────────────────────────
+sounddevice>=0.5.0
+soundfile>=0.12.0
+numpy>=2.0.0
+
+# ── ML / ASR (ai4bharat IndicConformer) ────────────────
+torch>=2.2.0
+torchaudio>=2.2.0
+transformers>=4.41.0
+
+# Required by newer HF audio loading 
+torchcodec>=0.1.0
+
+# Optional but recommended (faster CPU inference)
+onnxruntime>=1.24.1
+onnx>=1.16.0
+
+# ── Evaluation ──────────────────────────────────────────
+jiwer>=3.0.0
+faster-whisper>=1.0.0
+pandas>=2.0.0

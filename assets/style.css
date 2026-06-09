@@ -1,0 +1,49 @@
+/* ─────────────────────────────────────────────
+   FIXED RadioItems styling (Dash-compatible)
+   ───────────────────────────────────────────── */
+
+#radio-wk-model label,
+#radio-asr-engine label {
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Hide native radio but KEEP it clickable */
+#radio-wk-model input,
+#radio-asr-engine input {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+/* Selected state via :has (modern browsers) */
+#radio-wk-model label:has(input:checked) {
+    background: #9b6b2f !important;
+    color: #ffffff !important;
+    border-color: #9b6b2f !important;
+}
+
+#radio-asr-engine label:has(input:checked) {
+    background: #9b6b2f !important;
+    color: #ffffff !important;
+    border-color: #9b6b2f !important;
+}
+
+/* ai4bharat override */
+#radio-asr-engine label:has(input[value="ai4b"]:checked) {
+    background: #3a6b8a !important;
+    border-color: #3a6b8a !important;
+}
+
+/* Hover */
+#radio-wk-model label:hover,
+#radio-asr-engine label:hover {
+    border-color: #9b6b2f;
+    color: #9b6b2f;
+}
+
+/* Optional polish */
+button:hover {
+    transform: translateY(-1px);
+}
