@@ -4,7 +4,7 @@ Local-first audio transcription pipeline using **WhisperKit** (CoreML, macOS),
 **AWS Bedrock Claude Sonnet** for cleaning, and **AWS Translate** (+ ai4bharat for
 Indian languages) for English translation.
 
-This is a prototype made for DocFi, an AI platform that provides AI agents to automate administrative tasks to streamline healthcare workflows. This is not a final product.
+This is a prototype made for DocFi, a platform that provides AI agents to automate administrative tasks to streamline healthcare workflows. This is not a final product.
 
 ---
 
