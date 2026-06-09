@@ -1,4 +1,4 @@
-# Transcript Studio
+# DocFi Translation App
 
 Local-first audio transcription pipeline using **WhisperKit** (CoreML, macOS),
 **AWS Bedrock Claude Sonnet** for cleaning, and **AWS Translate** (+ ai4bharat for
