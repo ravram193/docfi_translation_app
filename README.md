@@ -38,7 +38,7 @@ English Translation (using either Claude-polished or raw transcript)
 ### 1. Create and activate a virtual environment
 
 ```bash
-python3 -m venv venv
+python -m venv venv
 source venv/bin/activate        # macOS/Linux
 # venv\Scripts\activate         # Windows
 ```
@@ -156,7 +156,10 @@ Attach these to the IAM user that owns your keys:
 
 ## Running Locally
 
+Navigate to the `app/` folder and run `app.py` in the terminal.
+
 ```bash
+cd app
 python app.py
 ```
 
@@ -226,7 +229,7 @@ The dataset for Hindi ASR evaluation was downloaded from Mozilla Data Collective
 To run the evaluation pipeline for Hindi, simply write the following code in the terminal:
 
 ```bash
-python3 eval.py --lang <hi> --max_samples 25
+python eval.py --lang <hi> --max_samples 25
 ```
 
 Feel free to change the number of samples. To change languages, type the abbreviation used to describe the language in the downloaded dataset.
